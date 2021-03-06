@@ -11,6 +11,30 @@ namespace OpenGourWS.Migrations
     [DbContext(typeof(OpenGroupContext))]
     partial class OpenGroupContextModelSnapshot : ModelSnapshot
     {
+        public Controllers.CategoriumsController CategoriumsController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Controllers.ProductoesController ProductoesController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Controllers.PedidoController PedidoController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

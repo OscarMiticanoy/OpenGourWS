@@ -24,6 +24,14 @@ namespace OpenGourWS.Controllers
             _context.ChangeTracker.LazyLoadingEnabled = false;
         }
 
+        public Pedido Pedido
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         // GET: api/Pedido
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PedidoResponse>>> GetPedidos()
@@ -90,31 +98,29 @@ namespace OpenGourWS.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPedido(int id, Pedido pedido)
+        public async Task<IActionResult> PutPedido(int id, int c)
         {
-            if (id != pedido.PedidoId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(pedido).State = EntityState.Modified;
-
+            var conn = _context.Database.GetDbConnection();
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PedidoExists(id))
+                await conn.OpenAsync();
+                using (var command = conn.CreateCommand())
                 {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+                    string query = "UPDATE Pedido SET Cantidad="+c+" where Pedido.Cantidad="+id+";";
+                    command.CommandText = query;
+                    DbDataReader reader = await command.ExecuteReaderAsync();
 
+                    if (reader.HasRows)
+                    {
+                        return (IActionResult)_context.Pedidos.Find(id);
+                    }
+                    reader.Dispose();
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
             return NoContent();
         }
 

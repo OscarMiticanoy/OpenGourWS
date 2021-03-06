@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpenGourWS.Controllers.CategoriumsController" Collapsed="true">
+    <Position X="2" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAABAAAgEAAAAAABABAAAAAAAAAAAAABIA=</HashCode>
+      <FileName>Controllers\CategoriumsController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Categorium" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenGourWS.Controllers.PedidoController" Collapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAJgEEAgAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\PedidoController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pedido" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenGourWS.Controllers.ProductoesController" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAACAAABAEAQAAAAAAAAAAAAAAAAAAAAAAAQIA=</HashCode>
+      <FileName>Controllers\ProductoesController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Producto" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenGourWS.Modelo.Categorium" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAgAABAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Modelo\Entities\Categorium.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGourWS.Modelo.Cliente" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAABAAgAAAAAAAAAAACAAAAQAAAAA=</HashCode>
+      <FileName>Modelo\Entities\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGourWS.Modelo.Pedido" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAgAAAAAAAgAAQYAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\Entities\Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGourWS.Modelo.Producto" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAgAAQgAAAAAAACAABAAAAAAA=</HashCode>
+      <FileName>Modelo\Entities\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGourWS.Program" Collapsed="true">
+    <Position X="4.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGourWS.Startup" Collapsed="true">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGourWS.Migrations.OpenGroupContextModelSnapshot" Collapsed="true">
+    <Position X="2" Y="1" Width="1.75" />
+    <AssociationLine Name="ProductoesController" Type="OpenGourWS.Controllers.ProductoesController" ManuallyRouted="true">
+      <Path>
+        <Point X="3.75" Y="1.658" />
+        <Point X="4.23" Y="1.658" />
+        <Point X="4.23" Y="2.095" />
+        <Point X="8.156" Y="2.095" />
+        <Point X="8.156" Y="2.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PedidoController" Type="OpenGourWS.Controllers.PedidoController" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="1.691" />
+        <Point X="3.25" Y="2.375" />
+        <Point X="5.25" Y="2.375" />
+        <Point X="5.25" Y="2.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAABAEA=</HashCode>
+      <FileName>Migrations\OpenGroupContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CategoriumsController" />
+      <Property Name="ProductoesController" />
+      <Property Name="PedidoController" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
