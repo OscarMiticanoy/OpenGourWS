@@ -44,8 +44,8 @@ namespace OpenGourWS.Controllers
                 using (var command = conn.CreateCommand())
                 {
                     string query = "SELECT Pedido_Id, c.Nombre Cliente, pr.Nombre Producto, pr.Precio, "
-                        +"p.Cantidad, p.Precio Total FROM Pedido p INNER JOIN Cliente c "
-                        +"ON c.Cliente_Id = p.Fk_Cliente_Id INNER JOIN Producto pr ON pr.Producto_Id = p.Fk_Producto_Id";
+                        + "p.Cantidad, p.Precio Total, p.Activo FROM Pedido p INNER JOIN Cliente c "
+                        + "ON c.Cliente_Id = p.Fk_Cliente_Id INNER JOIN Producto pr ON pr.Producto_Id = p.Fk_Producto_Id";
                     command.CommandText = query;
                     DbDataReader reader = await command.ExecuteReaderAsync();
 

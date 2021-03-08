@@ -49,6 +49,7 @@ namespace OpenGourWS.Modelo
                 entity.Property(e => e.producto);
                 entity.Property(e => e.precio);
                 entity.Property(e => e.cantidad);
+                entity.Property(e => e.activo);
             });
 
             modelBuilder.Entity<Categorium>(entity =>

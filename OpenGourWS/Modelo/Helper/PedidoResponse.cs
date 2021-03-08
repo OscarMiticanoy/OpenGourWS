@@ -13,6 +13,7 @@ namespace OpenGourWS.Modelo.Helper
         public String producto { get; set; }
         public double precio { get; set; }
         public int cantidad { get; set; }
+        public int activo { get; set; }
 
     }
 }
